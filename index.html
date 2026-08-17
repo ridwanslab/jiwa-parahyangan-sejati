@@ -3,349 +3,234 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>PT Jiwa Parahyangan Sejati — Ekspor Rempah &amp; Herbal Premium Indonesia</title>
-<meta name="description" content="PT Jiwa Parahyangan Sejati — eksportir rempah-rempah dan tanaman herbal asli Indonesia dari Bogor, Jawa Barat. Jahe, kunyit, temulawak, kapulaga, cengkeh, kayu manis, lada, sereh, daun kelor. Rantai pasok berkelanjutan, traceable, fair trade." />
+<title>PT Jiwa Parahyangan Sejati — Ekspor Rempah &amp; Herbal Indonesia</title>
+<meta name="description" content="PT Jiwa Parahyangan Sejati, Bogor — eksportir rempah dan tanaman herbal Indonesia: jahe, kunyit, temulawak, kapulaga, cengkeh, kayu manis, lada, sereh, daun kelor. Kemitraan langsung dengan petani Jawa Barat." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet" />
 <style>
-  /* ============ DESIGN TOKENS (palette dari logo: charcoal + orange) ============ */
+  /* ============================================================
+     PT JIWA PARAHYANGAN SEJATI — company profile
+     Design language: editorial, restrained. Inspired by Stripe.
+     Palette: charcoal + orange (dari logo perusahaan).
+     ============================================================ */
   :root {
-    --primary:       #E07020;
-    --primary-dark:  #C05A12;
-    --on-primary:    #FFFFFF;
-    --secondary:     #1F1F1F;
-    --on-secondary:  #FFFFFF;
-    --accent:        #EE7A2D;
-    --on-accent:     #FFFFFF;
-    --background:    #FAF7F2;
-    --foreground:    #1F1F1F;
-    --card:          #FFFFFF;
-    --card-fg:       #1F1F1F;
-    --muted:         #F1EDE6;
-    --muted-fg:      #6B6B6B;
-    --border:        #E8E2D8;
-    --destructive:   #DC2626;
-    --ring:          #E07020;
-    --gold:          #EE7A2D;
-    --font-head:     'Lora', serif;
-    --font-body:     'Raleway', sans-serif;
-    --radius:        20px;
-    --shadow-soft:   0 24px 48px -22px rgba(31, 31, 31, 0.28);
-    --shadow-card:   0 10px 30px -14px rgba(31, 31, 31, 0.20);
-    --ease:          220ms cubic-bezier(.4,0,.2,1);
+    --bg:          #ffffff;
+    --bg-soft:     #f8f7f4;
+    --ink:         #1a1a18;
+    --ink-2:       #4a4a45;
+    --ink-3:       #8a8a82;
+    --line:        #e8e6e0;
+    --brand:       #e07020;
+    --brand-dark:  #b85a14;
+    --brand-soft:  #fdf1e7;
+    --radius:      6px;
+    --shadow-1:    rgba(23,23,23,0.05) 0px 1px 2px;
+    --shadow-2:    rgba(23,23,23,0.06) 0px 15px 35px;
+    --shadow-3:    rgba(224,112,32,0.18) 0px 30px 45px -30px, rgba(0,0,0,0.08) 0px 18px 36px -18px;
+    --font:        'Source Sans 3', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --mono:        'Source Code Pro', ui-monospace, SFMono-Regular, Menlo, monospace;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
-    font-family: var(--font-body);
-    background: var(--background);
-    color: var(--foreground);
-    line-height: 1.65;
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
+    font-weight: 400;
   }
   img { display: block; max-width: 100%; }
   a { color: inherit; }
-  .container { width: min(1160px, 92%); margin-inline: auto; }
-  .section { padding: clamp(64px, 9vw, 120px) 0; position: relative; }
+  .container { width: min(1080px, 90%); margin-inline: auto; }
+  .section { padding: clamp(72px, 10vw, 128px) 0; }
 
   /* ============ TYPOGRAPHY ============ */
-  h1, h2, h3, .font-head { font-family: var(--font-head); font-weight: 600; line-height: 1.18; }
-  h1 { font-size: clamp(2.3rem, 5.4vw, 4.1rem); }
-  h2 { font-size: clamp(1.8rem, 3.8vw, 2.9rem); }
-  h3 { font-size: clamp(1.1rem, 1.8vw, 1.35rem); }
-  .eyebrow {
-    display: inline-flex; align-items: center; gap: 10px;
-    font-family: var(--font-body); font-weight: 700; font-size: .78rem;
-    letter-spacing: .22em; text-transform: uppercase; color: var(--primary);
-    margin-bottom: 16px;
+  h1, h2, h3 { font-weight: 300; line-height: 1.12; letter-spacing: -0.02em; }
+  h1 { font-size: clamp(2.4rem, 5.2vw, 3.9rem); letter-spacing: -0.03em; }
+  h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); }
+  h3 { font-size: 1.15rem; letter-spacing: -0.01em; }
+  .lead { font-size: clamp(1.02rem, 1.5vw, 1.18rem); color: var(--ink-2); font-weight: 300; max-width: 60ch; }
+  .kicker {
+    font-family: var(--mono); font-size: 0.78rem; font-weight: 500;
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--brand);
+    margin-bottom: 14px;
   }
-  .eyebrow::before { content: ''; width: 30px; height: 2.5px; background: var(--gold); border-radius: 2px; }
-  .lead { font-size: clamp(1.02rem, 1.5vw, 1.2rem); color: #4A4A4A; max-width: 62ch; }
+  .body-2 { color: var(--ink-2); font-weight: 300; }
 
   /* ============ BUTTONS ============ */
   .btn {
-    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-    font-family: var(--font-body); font-weight: 700; font-size: 1rem;
-    padding: 15px 30px; border-radius: 999px; cursor: pointer;
-    border: 2px solid var(--primary); text-decoration: none;
-    transition: transform var(--ease), background var(--ease), color var(--ease), box-shadow var(--ease);
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font); font-weight: 400; font-size: 1rem;
+    padding: 10px 18px; border-radius: var(--radius); cursor: pointer;
+    border: 1px solid var(--line); text-decoration: none;
+    transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
   }
-  .btn-primary { background: var(--primary); color: var(--on-primary); box-shadow: 0 10px 22px -10px rgba(192,90,18,.5); }
-  .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
-  .btn-ghost { background: transparent; color: var(--primary); }
-  .btn-ghost:hover { background: var(--primary); color: var(--on-primary); transform: translateY(-2px); }
-  .btn-light { background: #fff; color: var(--primary); border-color: #fff; box-shadow: 0 10px 24px -10px rgba(0,0,0,.4); }
-  .btn-light:hover { background: var(--background); transform: translateY(-2px); }
-  .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
-  .btn:focus-visible, a:focus-visible { outline: 3px solid var(--ring); outline-offset: 3px; }
+  .btn-primary { background: var(--brand); border-color: var(--brand); color: #fff; }
+  .btn-primary:hover { background: var(--brand-dark); border-color: var(--brand-dark); }
+  .btn-ghost { background: transparent; color: var(--ink); }
+  .btn-ghost:hover { border-color: var(--ink); }
+  .btn-light { background: #fff; border-color: #fff; color: var(--ink); }
+  .btn-light:hover { background: var(--bg-soft); }
+  .btn svg { width: 15px; height: 15px; }
+  .btn:focus-visible, a:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
 
   /* ============ NAV ============ */
   nav {
     position: sticky; top: 0; z-index: 100;
-    background: rgba(240, 253, 244, .92); backdrop-filter: blur(12px);
-    border-bottom: 1.5px solid var(--border);
+    background: rgba(255,255,255,.92); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
   }
-  .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 13px 0; gap: 16px; }
-  .logo { display: flex; align-items: center; gap: 11px; font-family: var(--font-head); font-weight: 700; font-size: 1.08rem; text-decoration: none; white-space: nowrap; }
-  .logo-mark {
-    width: 42px; height: 42px; border-radius: 14px; display: grid; place-items: center; flex-shrink: 0;
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #fff;
-    box-shadow: var(--shadow-card); position: relative; overflow: hidden;
-  }
-  .logo-mark::after { content: ''; position: absolute; width: 22px; height: 22px; border: 2px solid rgba(255,255,255,.35); border-radius: 50%; top: -8px; right: -8px; }
-  .nav-links { display: flex; gap: clamp(10px, 2vw, 24px); list-style: none; }
-  .nav-links a { text-decoration: none; font-weight: 600; font-size: .9rem; padding: 6px 2px; position: relative; white-space: nowrap; }
-  .nav-links a::after { content: ''; position: absolute; left: 0; bottom: 0; height: 2px; width: 0; background: var(--gold); transition: width var(--ease); }
-  .nav-links a:hover::after { width: 100%; }
-  .nav-cta { padding: 10px 20px; font-size: .86rem; flex-shrink: 0; }
-  .hamburger { display: none; background: none; border: 2px solid var(--primary); border-radius: 10px; padding: 7px; cursor: pointer; }
-  .hamburger svg { width: 24px; height: 24px; stroke: var(--primary); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 20px; }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 500; font-size: 1rem; text-decoration: none; white-space: nowrap; }
+  .logo img { width: 30px; height: 30px; object-fit: contain; }
+  .logo .l-name { letter-spacing: -0.01em; }
+  .nav-links { display: flex; gap: clamp(14px, 2.5vw, 28px); list-style: none; }
+  .nav-links a { text-decoration: none; font-size: 0.9rem; color: var(--ink-2); transition: color 180ms ease; }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-cta { padding: 8px 16px; font-size: 0.88rem; }
+  .hamburger { display: none; background: none; border: 1px solid var(--line); border-radius: var(--radius); padding: 8px; cursor: pointer; }
+  .hamburger svg { width: 20px; height: 20px; stroke: var(--ink); }
 
   /* ============ HERO ============ */
-  .hero { position: relative; min-height: 94vh; display: flex; align-items: center; overflow: hidden; }
-  .hero-bg { position: absolute; inset: 0; }
-  .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
-  .hero-bg::after {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(100deg, rgba(20,83,45,.93) 0%, rgba(20,83,45,.78) 45%, rgba(20,83,45,.30) 100%);
+  .hero { position: relative; border-bottom: 1px solid var(--line); }
+  .hero-inner { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(32px, 5vw, 64px); align-items: center; padding: clamp(72px, 10vw, 120px) 0; }
+  .hero h1 { margin-top: 4px; }
+  .hero h1 .accent { color: var(--brand); font-style: normal; }
+  .hero-sub { margin-top: 22px; color: var(--ink-2); font-weight: 300; font-size: 1.1rem; max-width: 52ch; }
+  .hero-meta { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 30px; font-size: 0.88rem; color: var(--ink-3); }
+  .hero-meta span { display: inline-flex; align-items: center; gap: 7px; }
+  .hero-meta svg { width: 14px; height: 14px; stroke: var(--brand); }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+  .hero-photo { position: relative; }
+  .hero-photo img { border-radius: var(--radius); width: 100%; aspect-ratio: 4/3.4; object-fit: cover; box-shadow: var(--shadow-3); }
+  .hero-photo figcaption {
+    position: absolute; bottom: 12px; left: 12px;
+    background: rgba(255,255,255,.94); border: 1px solid var(--line); border-radius: 4px;
+    font-family: var(--mono); font-size: 0.7rem; color: var(--ink-2);
+    padding: 6px 10px;
   }
-  .hero-inner { position: relative; z-index: 2; padding: clamp(90px, 11vh, 140px) 0; max-width: 760px; }
-  .hero .eyebrow { color: #BBF7D0; }
-  .hero .eyebrow::before { background: var(--gold); }
-  .hero h1 { color: #fff; text-shadow: 0 2px 26px rgba(0,0,0,.35); }
-  .hero h1 .accent { color: #FCD34D; font-style: italic; }
-  .hero-sub { color: rgba(255,255,255,.9); margin-top: 20px; font-size: clamp(1.02rem, 1.6vw, 1.22rem); max-width: 58ch; }
-  .hero-tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 26px; }
-  .hero-tags span {
-    background: rgba(255,255,255,.13); border: 1.5px solid rgba(255,255,255,.4);
-    color: #fff; backdrop-filter: blur(6px);
-    padding: 7px 15px; border-radius: 999px; font-weight: 600; font-size: .82rem;
-  }
-  .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 36px; }
-  .hero-meta {
-    display: flex; flex-wrap: wrap; gap: 22px; margin-top: 42px; padding-top: 22px;
-    border-top: 1px solid rgba(255,255,255,.22);
-    color: rgba(255,255,255,.88); font-weight: 600; font-size: .92rem;
-  }
-  .hero-meta div { display: flex; align-items: center; gap: 9px; }
-  .hero-meta svg { width: 19px; height: 19px; stroke: #FCD34D; flex-shrink: 0; }
-  .scroll-hint {
-    position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 3;
-    color: rgba(255,255,255,.75); font-size: .76rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
-    display: flex; flex-direction: column; align-items: center; gap: 8px;
-  }
-  .scroll-hint::after { content: ''; width: 1.5px; height: 36px; background: rgba(255,255,255,.5); animation: drop 1.8s ease-in-out infinite; }
-  @keyframes drop { 0% { transform: scaleY(0); transform-origin: top; } 45% { transform: scaleY(1); transform-origin: top; } 55% { transform: scaleY(1); transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
 
-  /* ============ MARQUEE ============ */
-  .marquee { background: var(--primary-dark); color: #D1FAE5; overflow: hidden; padding: 13px 0; }
-  .marquee-track { display: flex; gap: 48px; white-space: nowrap; animation: scroll 32s linear infinite; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-size: .84rem; }
-  .marquee-track span { display: flex; align-items: center; gap: 48px; }
-  .marquee-track span::after { content: '✦'; color: var(--gold); }
-  @keyframes scroll { to { transform: translateX(-50%); } }
-
-  /* ============ SECTION HEAD ============ */
-  .sec-head { max-width: 760px; margin-bottom: clamp(38px, 5vw, 58px); }
-  .sec-head.center { margin-inline: auto; text-align: center; }
-  .sec-head.center .eyebrow { justify-content: center; }
-  .sec-head p { margin-top: 14px; }
+  /* ============ STRIP PRODUK ============ */
+  .strip { border-bottom: 1px solid var(--line); background: var(--bg-soft); }
+  .strip-inner { display: flex; flex-wrap: wrap; gap: 8px 26px; padding: 16px 0; }
+  .strip-inner span { font-family: var(--mono); font-size: 0.78rem; color: var(--ink-3); letter-spacing: 0.04em; }
 
   /* ============ TENTANG ============ */
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 5vw, 64px); align-items: center; }
-  .about-imgs { position: relative; }
-  .about-imgs .main {
-    width: 100%; aspect-ratio: 4/3.2; object-fit: cover;
-    border-radius: 24px; border: 3px solid var(--primary); box-shadow: var(--shadow-soft);
-  }
-  .about-imgs .float {
-    position: absolute; right: -12px; bottom: -28px; width: 50%; aspect-ratio: 4/3; object-fit: cover;
-    border-radius: 20px; border: 3px solid var(--primary); box-shadow: var(--shadow-soft);
-  }
-  .about-badge {
-    position: absolute; top: -16px; left: 16px;
-    background: var(--gold); color: #1a2e05; font-weight: 800; font-size: .78rem;
-    border: 2px solid var(--primary-dark); border-radius: 999px; padding: 8px 16px;
-    box-shadow: var(--shadow-card); letter-spacing: .04em;
-  }
-  .check-list { list-style: none; margin-top: 22px; display: grid; gap: 13px; }
-  .check-list li { display: flex; gap: 12px; align-items: flex-start; font-weight: 500; }
-  .check-list svg { width: 21px; height: 21px; flex-shrink: 0; stroke: var(--primary); margin-top: 3px; }
-  .about-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 34px; }
-  .stat { background: var(--card); border: 2px solid var(--border); border-radius: var(--radius); padding: 18px 12px; text-align: center; box-shadow: var(--shadow-card); }
-  .stat b { display: block; font-family: var(--font-head); font-size: 1.7rem; color: var(--primary); }
-  .stat span { font-size: .76rem; font-weight: 700; color: var(--muted-fg); text-transform: uppercase; letter-spacing: .05em; }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 80px); align-items: start; }
+  .about-figures { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .about-figures figure img { border-radius: var(--radius); width: 100%; aspect-ratio: 4/3.2; object-fit: cover; }
+  .about-figures figure:first-child img { aspect-ratio: 4/4.6; }
+  .about-figures figcaption { font-family: var(--mono); font-size: 0.68rem; color: var(--ink-3); margin-top: 8px; }
+  .about-body h2 { margin-bottom: 18px; }
+  .about-body p + p { margin-top: 14px; }
+  .about-list { list-style: none; margin-top: 26px; border-top: 1px solid var(--line); }
+  .about-list li { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 0.95rem; }
+  .about-list .n { font-family: var(--mono); font-size: 0.75rem; color: var(--brand); font-weight: 500; padding-top: 3px; }
 
-  /* ============ KEUNGGULAN ============ */
-  .why-band { background: var(--primary-dark); border-block: 3px solid var(--primary); }
+  /* ============ KEUNGGULAN (list editorial) ============ */
+  .why-band { background: var(--ink); color: #fff; }
+  .why-band .kicker { color: var(--brand); }
   .why-band h2 { color: #fff; }
-  .why-band .lead { color: rgba(255,255,255,.85); }
-  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
-  .why-card {
-    background: rgba(255,255,255,.06); border: 1.5px solid rgba(187,247,208,.25);
-    border-radius: 20px; padding: 26px; display: flex; flex-direction: column; gap: 13px;
-    transition: background var(--ease), transform var(--ease);
+  .why-band .lead { color: rgba(255,255,255,.65); }
+  .why-head { max-width: 560px; margin-bottom: clamp(40px, 5vw, 64px); }
+  .why-list { border-top: 1px solid rgba(255,255,255,.16); }
+  .why-row {
+    display: grid; grid-template-columns: 64px 1fr 1.2fr; gap: 20px; align-items: baseline;
+    padding: 26px 0; border-bottom: 1px solid rgba(255,255,255,.16);
   }
-  .why-card:hover { background: rgba(255,255,255,.11); transform: translateY(-5px); }
-  .why-card .ic {
-    width: 50px; height: 50px; border-radius: 14px; display: grid; place-items: center;
-    background: var(--gold); color: #1a2e05; box-shadow: 0 4px 0 rgba(0,0,0,.22);
-  }
-  .why-card .ic svg { width: 25px; height: 25px; }
-  .why-card h3 { color: #fff; }
-  .why-card p { color: rgba(255,255,255,.82); font-size: .93rem; }
+  .why-row .n { font-family: var(--mono); font-size: 0.8rem; color: var(--brand); }
+  .why-row h3 { color: #fff; font-weight: 300; font-size: 1.3rem; }
+  .why-row p { color: rgba(255,255,255,.6); font-weight: 300; font-size: 0.95rem; }
 
-  /* ============ PRODUK ============ */
-  .prod-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 18px; }
-  .prod-card {
-    background: var(--card); border: 1.5px solid var(--border); border-radius: 20px;
-    padding: 24px; display: flex; flex-direction: column; gap: 10px;
-    box-shadow: var(--shadow-card); position: relative; overflow: hidden;
-    transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
+  /* ============ PRODUK (tabel) ============ */
+  .prod-table { border-top: 1px solid var(--line); }
+  .prod-row {
+    display: grid; grid-template-columns: 1.4fr 2fr 0.6fr; gap: 20px; align-items: baseline;
+    padding: 22px 4px; border-bottom: 1px solid var(--line);
+    transition: background 180ms ease;
   }
-  .prod-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
-    background: linear-gradient(90deg, var(--primary), var(--gold));
-    opacity: 0; transition: opacity var(--ease);
-  }
-  .prod-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-soft); border-color: var(--primary); }
-  .prod-card:hover::before { opacity: 1; }
-  .prod-ic {
-    width: 46px; height: 46px; border-radius: 13px; display: grid; place-items: center;
-    background: var(--muted); color: var(--primary); margin-bottom: 4px;
-  }
-  .prod-ic svg { width: 23px; height: 23px; }
-  .prod-card h3 { font-size: 1.15rem; }
-  .prod-card p { font-size: .9rem; color: #4A4A4A; }
-  .prod-grade {
-    margin-top: auto; display: inline-flex; align-items: center; gap: 7px;
-    font-size: .76rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
-    color: var(--accent);
-  }
-  .prod-grade::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
+  .prod-row:hover { background: var(--bg-soft); }
+  .prod-row h3 { font-size: 1.35rem; font-weight: 300; }
+  .prod-row p { color: var(--ink-2); font-weight: 300; font-size: 0.95rem; }
+  .prod-row .grade { font-family: var(--mono); font-size: 0.72rem; color: var(--brand); text-align: right; white-space: nowrap; }
+  .prod-note { margin-top: 18px; font-family: var(--mono); font-size: 0.75rem; color: var(--ink-3); }
 
-  /* ============ PROSES / RANTAI PASOK ============ */
-  .process-section { background: var(--muted); border-block: 3px solid var(--primary); }
-  .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; counter-reset: step; }
-  .pstep {
-    background: var(--card); border: 1.5px solid var(--border); border-radius: 20px;
-    padding: 26px 24px; position: relative; box-shadow: var(--shadow-card);
-    transition: transform var(--ease);
-  }
-  .pstep:hover { transform: translateY(-5px); }
-  .pstep-num {
-    width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center;
-    background: var(--primary); color: #fff; font-family: var(--font-head); font-weight: 700; font-size: 1.15rem;
-    margin-bottom: 14px; box-shadow: 0 5px 0 rgba(31,31,31,.25);
-  }
-  .pstep h3 { font-size: 1.1rem; }
-  .pstep p { font-size: .9rem; color: #4A4A4A; margin-top: 8px; }
-
-  /* ============ GALERI ============ */
-  .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
-  .g-item { position: relative; border-radius: 18px; overflow: hidden; border: 2px solid var(--primary); aspect-ratio: 1/1; cursor: pointer; }
-  .g-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
-  .g-item:hover img { transform: scale(1.08); }
-  .g-item figcaption {
-    position: absolute; inset: auto 0 0 0; padding: 34px 14px 12px; color: #fff;
-    background: linear-gradient(transparent, rgba(20,83,45,.92)); font-weight: 700; font-size: .86rem;
-    opacity: 0; transition: opacity var(--ease);
-  }
-  .g-item:hover figcaption { opacity: 1; }
+  /* ============ PROSES ============ */
+  .process-section { background: var(--bg-soft); border-block: 1px solid var(--line); }
+  .proc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .proc-step { background: var(--bg); padding: clamp(20px, 3vw, 32px); }
+  .proc-step .n { font-family: var(--mono); font-size: 0.75rem; color: var(--brand); margin-bottom: 12px; display: block; }
+  .proc-step h3 { font-size: 1.05rem; margin-bottom: 8px; }
+  .proc-step p { font-size: 0.88rem; color: var(--ink-2); font-weight: 300; }
 
   /* ============ KONTAK ============ */
-  .contact-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(30px, 4vw, 48px); align-items: stretch; }
-  .info-card { background: var(--card); border: 2px solid var(--primary); border-radius: 22px; padding: clamp(24px, 3vw, 34px); box-shadow: var(--shadow-soft); }
-  .info-row { display: flex; gap: 16px; padding: 17px 0; border-bottom: 1.5px dashed var(--border); align-items: flex-start; }
-  .info-row:last-of-type { border-bottom: none; }
-  .info-row .ic {
-    width: 46px; height: 46px; flex-shrink: 0; border-radius: 13px;
-    background: var(--muted); border: 1.5px solid var(--primary); display: grid; place-items: center;
-  }
-  .info-row .ic svg { width: 21px; height: 21px; stroke: var(--primary); }
-  .info-row b { display: block; font-size: .95rem; }
-  .info-row span { font-size: .92rem; color: #4A4A4A; }
-  .info-row a { font-weight: 700; color: var(--primary); text-decoration: none; }
-  .info-row a:hover { text-decoration: underline; }
-  .quote-form { background: var(--card); border: 2px solid var(--primary); border-radius: 22px; padding: clamp(24px, 3vw, 34px); box-shadow: var(--shadow-soft); }
-  .quote-form h3 { margin-bottom: 6px; }
-  .quote-form p { font-size: .92rem; color: #4A4A4A; margin-bottom: 20px; }
-  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .field { display: flex; flex-direction: column; gap: 6px; }
-  .field.full { grid-column: 1 / -1; }
-  .field label { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--muted-fg); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 64px); align-items: start; }
+  .contact-info h2 { margin-bottom: 18px; }
+  .contact-info p { color: var(--ink-2); font-weight: 300; }
+  .c-list { list-style: none; margin-top: 28px; border-top: 1px solid var(--line); }
+  .c-list li { display: flex; justify-content: space-between; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--line); font-size: 0.92rem; }
+  .c-list .k { color: var(--ink-3); }
+  .c-list .v { text-align: right; }
+  .c-list a { color: var(--brand); text-decoration: none; }
+  .c-list a:hover { text-decoration: underline; }
+  .quote-form { border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(22px, 3vw, 32px); background: var(--bg); }
+  .quote-form h3 { margin-bottom: 4px; }
+  .quote-form .sub { font-size: 0.88rem; color: var(--ink-3); margin-bottom: 22px; }
+  .field { margin-bottom: 14px; }
+  .field label { display: block; font-size: 0.78rem; color: var(--ink-3); margin-bottom: 6px; }
   .field input, .field select, .field textarea {
-    font-family: var(--font-body); font-size: .95rem; color: var(--foreground);
-    padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 12px;
-    background: var(--background); transition: border-color var(--ease), box-shadow var(--ease);
+    width: 100%; font-family: var(--font); font-size: 0.95rem; font-weight: 300;
+    padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--radius);
+    background: var(--bg); color: var(--ink); transition: border-color 180ms ease, box-shadow 180ms ease;
   }
   .field input:focus, .field select:focus, .field textarea:focus {
-    outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(21,128,61,.15);
+    outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px rgba(224,112,32,.12);
   }
-  .field textarea { resize: vertical; min-height: 90px; }
-  .form-note { font-size: .78rem; color: var(--muted-fg); margin-top: 12px; }
+  .field textarea { resize: vertical; min-height: 84px; }
+  .form-note { font-size: 0.75rem; color: var(--ink-3); margin-top: 10px; }
 
   /* ============ CTA ============ */
-  .cta-band {
-    background: linear-gradient(120deg, var(--primary-dark), var(--primary));
-    color: var(--on-primary); border-radius: 26px; text-align: center;
-    padding: clamp(46px, 6vw, 76px) 24px; position: relative; overflow: hidden;
-  }
-  .cta-band h2 { color: #fff; }
-  .cta-band p { color: rgba(255,255,255,.86); margin: 14px auto 30px; max-width: 48ch; }
-  .cta-band::before, .cta-band::after { content: ''; position: absolute; border: 2px solid rgba(255,255,255,.13); border-radius: 50%; }
-  .cta-band::before { width: 330px; height: 330px; top: -160px; right: -80px; }
-  .cta-band::after { width: 240px; height: 240px; bottom: -130px; left: -60px; }
+  .cta-band { border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(48px, 7vw, 80px); text-align: center; background: var(--bg-soft); }
+  .cta-band h2 { max-width: 20ch; margin-inline: auto; }
+  .cta-band p { color: var(--ink-2); font-weight: 300; margin: 14px auto 28px; max-width: 46ch; }
 
   /* ============ FOOTER ============ */
-  footer { background: var(--primary-dark); color: #D1FAE5; padding: 46px 0 28px; }
-  .foot-grid { display: flex; flex-wrap: wrap; gap: 28px; justify-content: space-between; align-items: center; }
-  .foot-links { display: flex; gap: 22px; list-style: none; flex-wrap: wrap; }
-  .foot-links a { color: #D1FAE5; text-decoration: none; font-weight: 600; font-size: .92rem; }
-  .foot-links a:hover { color: #fff; }
-  .foot-note { margin-top: 26px; border-top: 1px solid rgba(209,250,229,.2); padding-top: 20px; font-size: .82rem; color: rgba(209,250,229,.7); display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; }
-  .watermark { display: inline-block; background: rgba(209,250,229,.13); border: 1px dashed rgba(209,250,229,.5); border-radius: 8px; padding: 3px 10px; font-size: .74rem; font-weight: 700; letter-spacing: .08em; }
-
-  /* ============ ANIMASI ============ */
-  .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
-  .reveal.in { opacity: 1; transform: none; }
-  @media (prefers-reduced-motion: reduce) {
-    .reveal { opacity: 1; transform: none; transition: none; }
-    .marquee-track, .scroll-hint::after { animation: none; }
-    html { scroll-behavior: auto; }
-  }
+  footer { border-top: 1px solid var(--line); padding: 40px 0 32px; }
+  .foot-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center; }
+  .foot-links { display: flex; gap: 20px; list-style: none; flex-wrap: wrap; }
+  .foot-links a { text-decoration: none; font-size: 0.88rem; color: var(--ink-2); }
+  .foot-links a:hover { color: var(--ink); }
+  .foot-note { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 0.78rem; color: var(--ink-3); display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; }
 
   /* ============ RESPONSIVE ============ */
-  @media (max-width: 1024px) {
-    .about-grid { grid-template-columns: 1fr; }
-    .about-imgs { max-width: 560px; }
-    .gallery { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 900px) {
+    .hero-inner, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .proc-grid { grid-template-columns: repeat(2, 1fr); }
+    .why-row { grid-template-columns: 40px 1fr; gap: 8px 16px; }
+    .why-row p { grid-column: 2; }
+    .prod-row { grid-template-columns: 1fr; gap: 6px; }
+    .prod-row .grade { text-align: left; }
+    .hero-photo { order: -1; }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 700px) {
     .nav-links {
       display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column;
-      background: var(--background); border-bottom: 2px solid var(--primary);
-      padding: 16px 6%; gap: 4px; box-shadow: 0 18px 30px -18px rgba(0,0,0,.25);
+      background: #fff; border-bottom: 1px solid var(--line);
+      padding: 14px 5%; gap: 4px;
     }
     .nav-links.open { display: flex; }
-    .nav-links a { padding: 10px 4px; font-size: 1rem; }
+    .nav-links a { padding: 9px 0; }
     .hamburger { display: block; }
     .nav-cta { display: none; }
-    .gallery { grid-template-columns: repeat(2, 1fr); }
-    .contact-grid { grid-template-columns: 1fr; }
-    .hero { min-height: auto; }
-    .hero-inner { padding: 90px 0 110px; }
-    .form-grid { grid-template-columns: 1fr; }
-    .about-imgs .float { right: 6px; }
+    .about-figures { grid-template-columns: 1fr 1fr; }
+    .proc-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 480px) {
-    .gallery { grid-template-columns: 1fr 1fr; gap: 10px; }
-    .hero-actions .btn { width: 100%; }
-    .about-stats { gap: 8px; }
-    .stat { padding: 14px 6px; }
-    .stat b { font-size: 1.35rem; }
+    .hero-actions .btn { width: 100%; justify-content: center; }
+    .cta-band { padding: 36px 20px; }
   }
 </style>
 </head>
@@ -355,102 +240,85 @@
 <nav>
   <div class="container nav-inner">
     <a href="#beranda" class="logo">
-      <span class="logo-mark" style="background:#fff;overflow:visible;box-shadow:none">
-        <img src="images/logo-icon-jiwa-parahyangan-256.png" alt="Logo PT Jiwa Parahyangan Sejati" style="width:36px;height:36px;object-fit:contain" />
-      </span>
-      Jiwa Parahyangan Sejati
+      <img src="images/logo-icon-jiwa-parahyangan-256.png" alt="Logo PT Jiwa Parahyangan Sejati" />
+      <span class="l-name">Jiwa Parahyangan Sejati</span>
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#tentang">Tentang</a></li>
       <li><a href="#keunggulan">Keunggulan</a></li>
       <li><a href="#produk">Produk</a></li>
       <li><a href="#proses">Proses</a></li>
-      <li><a href="#galeri">Galeri</a></li>
       <li><a href="#kontak">Kontak</a></li>
     </ul>
     <a href="#kontak" class="btn btn-primary nav-cta">Minta Penawaran</a>
     <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
   </div>
 </nav>
 
 <!-- ============ HERO ============ -->
 <header class="hero" id="beranda">
-  <div class="hero-bg"><img src="images/hero-spices.jpg" alt="Rempah-rempah pilihan Indonesia" /></div>
   <div class="container hero-inner">
-    <span class="eyebrow">Eksportir Rempah &amp; Herbal · Bogor, Jawa Barat</span>
-    <h1>Jiwa Parahyangan<br />dalam <span class="accent">Setiap Rempah</span></h1>
-    <p class="hero-sub">
-      PT Jiwa Parahyangan Sejati menghadirkan rempah-rempah dan tanaman herbal asli Indonesia
-      dengan kualitas premium — ditanam petani, diolah dengan standar ekspor, untuk pasar dunia.
-    </p>
-    <div class="hero-tags">
-      <span>Jahe Gajah</span><span>Jahe Merah</span><span>Kunyit</span><span>Temulawak</span>
-      <span>Kapulaga</span><span>Cengkeh</span><span>Kayu Manis</span><span>Lada Hitam &amp; Putih</span>
-      <span>Sereh</span><span>Daun Kelor</span>
+    <div>
+      <p class="kicker">Eksportir rempah &amp; herbal · Bogor, Jawa Barat</p>
+      <h1>Rempah Indonesia,<br />di tangan yang <span class="accent">tepat</span>.</h1>
+      <p class="hero-sub">
+        PT Jiwa Parahyangan Sejati menyuplai rempah-rempah dan tanaman herbal asli Indonesia
+        ke pasar internasional — bekerja langsung dengan petani di Jawa Barat,
+        dari panen hingga pengemasan.
+      </p>
+      <div class="hero-actions">
+        <a href="#kontak" class="btn btn-primary">Minta Penawaran</a>
+        <a href="#produk" class="btn btn-ghost">Lihat Produk</a>
+      </div>
+      <div class="hero-meta">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg> Bogor, Jawa Barat</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg> Kemitraan petani langsung</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg> Traceable, fair trade</span>
+      </div>
     </div>
-    <div class="hero-actions">
-      <a href="#kontak" class="btn btn-light">
-        Minta Penawaran
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-      <a href="#produk" class="btn" style="border-color:#fff;color:#fff;background:transparent">Lihat Produk</a>
-    </div>
-    <div class="hero-meta">
-      <div><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg> Berbasis di Bogor — Jantung Parahyangan</div>
-      <div><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg> Rantai Pasok Berkelanjutan</div>
-      <div><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0zM9 12l2 2 4-4"/></svg> Fair Trade &amp; Traceable</div>
-    </div>
+    <figure class="hero-photo">
+      <img src="images/hero-spices.jpg" alt="Rempah-rempah pilihan dari Jawa Barat" />
+      <figcaption>Produk pilihan · Jawa Barat</figcaption>
+    </figure>
   </div>
-  <div class="scroll-hint">Scroll</div>
 </header>
 
-<!-- ============ MARQUEE ============ -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>Jahe Gajah&nbsp;&nbsp;Jahe Merah&nbsp;&nbsp;Kunyit&nbsp;&nbsp;Temulawak&nbsp;&nbsp;Kapulaga&nbsp;&nbsp;Cengkeh&nbsp;&nbsp;Kayu Manis&nbsp;&nbsp;Lada Hitam &amp; Putih&nbsp;&nbsp;Sereh&nbsp;&nbsp;Daun Kelor&nbsp;&nbsp;</span>
-    <span>Jahe Gajah&nbsp;&nbsp;Jahe Merah&nbsp;&nbsp;Kunyit&nbsp;&nbsp;Temulawak&nbsp;&nbsp;Kapulaga&nbsp;&nbsp;Cengkeh&nbsp;&nbsp;Kayu Manis&nbsp;&nbsp;Lada Hitam &amp; Putih&nbsp;&nbsp;Sereh&nbsp;&nbsp;Daun Kelor&nbsp;&nbsp;</span>
+<!-- ============ STRIP PRODUK ============ -->
+<div class="strip" aria-hidden="true">
+  <div class="container strip-inner">
+    <span>Jahe Gajah</span><span>Jahe Merah</span><span>Kunyit</span><span>Temulawak</span>
+    <span>Kapulaga</span><span>Cengkeh</span><span>Kayu Manis</span><span>Lada Hitam &amp; Putih</span>
+    <span>Sereh</span><span>Daun Kelor</span>
   </div>
 </div>
 
 <!-- ============ TENTANG ============ -->
 <section class="section" id="tentang">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-imgs reveal">
-        <span class="about-badge">Dari Parahyangan untuk Dunia</span>
-        <img class="main" src="images/farmers.jpg" alt="Petani mitra di Jawa Barat" />
-        <img class="float" src="images/packaging.jpg" alt="Pengemasan sesuai standar ekspor" />
-      </div>
-      <div class="reveal">
-        <span class="eyebrow">Tentang Kami</span>
-        <h2>Perusahaan Ekspor yang Tumbuh dari Kekayaan Parahyangan</h2>
-        <p class="lead" style="margin-top:16px">
-          Berbasis di <b>Bogor, Jawa Barat</b> — jantung kawasan Parahyangan yang kaya akan hasil bumi —
-          PT Jiwa Parahyangan Sejati fokus pada penyediaan dan ekspor
-          <b>rempah-rempah &amp; tanaman herbal asli Indonesia</b> dengan kualitas premium untuk pasar internasional.
-        </p>
-        <ul class="check-list">
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            Bekerja langsung dengan petani di wilayah Jawa Barat
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            Rantai pasok berkelanjutan, traceable, dan fair trade
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            Sortasi, pengeringan &amp; pengemasan higienis standar ekspor
-          </li>
-        </ul>
-        <div class="about-stats">
-          <div class="stat"><b>10+</b><span>Produk Unggulan</span></div>
-          <div class="stat"><b>100%</b><span>Asli Indonesia</span></div>
-          <div class="stat"><b>1°</b><span>Kualitas Premium</span></div>
-        </div>
-      </div>
+  <div class="container about-grid">
+    <div class="about-figures">
+      <figure><img src="images/farmers.jpg" alt="Petani mitra di Jawa Barat" /><figcaption>Petani mitra — Jawa Barat</figcaption></figure>
+      <figure><img src="images/packaging.jpg" alt="Pengemasan produk" /><figcaption>Pengemasan standar ekspor</figcaption></figure>
+    </div>
+    <div class="about-body">
+      <p class="kicker">Tentang perusahaan</p>
+      <h2>Perusahaan ekspor yang tumbuh dari kekayaan Parahyangan</h2>
+      <p class="body-2">
+        Berbasis di Bogor, di jantung kawasan Parahyangan, perusahaan ini bergerak di
+        penyediaan dan ekspor rempah-rempah serta tanaman herbal asli Indonesia.
+        Kualitas produk dijaga mulai dari pemilihan bahan baku di tingkat petani,
+        proses sortasi dan pengeringan, hingga pengemasan akhir.
+      </p>
+      <p class="body-2">
+        Seluruh produk dikerjakan langsung bersama petani di wilayah Jawa Barat.
+        Rantai pasok dirancang berkelanjutan, dapat ditelusuri, dan berpihak pada petani.
+      </p>
+      <ul class="about-list">
+        <li><span class="n">01</span> Kemitraan langsung dengan petani Jawa Barat, tanpa perantara</li>
+        <li><span class="n">02</span> Rantai pasok berkelanjutan, traceable, dan fair trade</li>
+        <li><span class="n">03</span> Sortasi, pengeringan, dan pengemasan higienis standar ekspor</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -458,41 +326,42 @@
 <!-- ============ KEUNGGULAN ============ -->
 <section class="section why-band" id="keunggulan">
   <div class="container">
-    <div class="sec-head center reveal">
-      <span class="eyebrow" style="color:#BBF7D0">Keunggulan Kami</span>
-      <h2>Dari Petani ke Pasar Dunia,<br />dengan Integritas</h2>
+    <div class="why-head">
+      <p class="kicker">Cara kami bekerja</p>
+      <h2>Integritas di setiap tahap, dari kebun sampai pelabuhan</h2>
+      <p class="lead">Enam prinsip yang kami pegang dalam setiap pengiriman.</p>
     </div>
-    <div class="why-grid">
-      <article class="why-card reveal">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/></svg></span>
-        <h3>Langsung dari Petani</h3>
-        <p>Kemitraan langsung dengan petani Jawa Barat — hasil panen terbaik tanpa perantara, petani mendapat harga yang adil.</p>
-      </article>
-      <article class="why-card reveal">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0zM12 8v4l2.5 2.5"/></svg></span>
+    <div class="why-list">
+      <div class="why-row">
+        <span class="n">01</span>
+        <h3>Langsung dari petani</h3>
+        <p>Kemitraan dengan petani Jawa Barat. Hasil terbaik dipilih di sumbernya, harga yang adil untuk petani.</p>
+      </div>
+      <div class="why-row">
+        <span class="n">02</span>
         <h3>Traceable</h3>
-        <p>Setiap lot dapat ditelusuri hingga kebun dan petani asalnya — transparansi penuh di seluruh rantai pasok.</p>
-      </article>
-      <article class="why-card reveal">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-        <h3>Fair Trade</h3>
-        <p>Kemitraan yang adil dan berkelanjutan dengan komunitas petani lokal, mendukung kesejahteraan desa.</p>
-      </article>
-      <article class="why-card reveal">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg></span>
-        <h3>Berkelanjutan</h3>
-        <p>Praktik pertanian yang menjaga kesuburan tanah dan keberlanjutan pasokan untuk jangka panjang.</p>
-      </article>
-      <article class="why-card reveal">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9M14 17H5M17 12H8"/><circle cx="17" cy="7" r="3"/><circle cx="8" cy="17" r="3"/><circle cx="17" cy="17" r="3"/><circle cx="8" cy="7" r="3"/></svg></span>
-        <h3>Standar Ekspor</h3>
+        <p>Setiap lot dapat ditelusuri hingga kebun asalnya. Transparan untuk pembeli maupun petani.</p>
+      </div>
+      <div class="why-row">
+        <span class="n">03</span>
+        <h3>Fair trade</h3>
+        <p>Kemitraan yang adil dan berkelanjutan, mendukung kesejahteraan komunitas petani lokal.</p>
+      </div>
+      <div class="why-row">
+        <span class="n">04</span>
+        <h3>Standar ekspor</h3>
         <p>Sortasi, pengeringan, dan pengemasan higienis sesuai standar ekspor internasional.</p>
-      </article>
-      <article class="why-card reveal">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></span>
-        <h3>Kualitas Premium</h3>
-        <p>Seleksi ketat pada setiap tahap — hanya produk dengan aroma, rasa, dan kandungan terbaik yang dikirim.</p>
-      </article>
+      </div>
+      <div class="why-row">
+        <span class="n">05</span>
+        <h3>Berkelanjutan</h3>
+        <p>Praktik yang menjaga kesuburan tanah dan keberlanjutan pasokan jangka panjang.</p>
+      </div>
+      <div class="why-row">
+        <span class="n">06</span>
+        <h3>Kualitas konsisten</h3>
+        <p>Seleksi ketat di setiap tahap — aroma, rasa, dan kandungan yang sama di setiap kiriman.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -500,196 +369,136 @@
 <!-- ============ PRODUK ============ -->
 <section class="section" id="produk">
   <div class="container">
-    <div class="sec-head center reveal">
-      <span class="eyebrow">Produk Unggulan</span>
-      <h2>Sepuluh Rempah &amp; Herbal Pilihan</h2>
-      <p class="lead" style="margin-inline:auto">Setiap produk melalui sortasi, pengeringan, dan pengemasan higienis sesuai standar ekspor.</p>
-    </div>
-    <div class="prod-grid">
-      <article class="prod-card reveal">
-        <span class="prod-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10M9 20c0-4 1.5-6 3-8 1.5 2 3 4 3 8M12 4C9 7 8 10 8 13a4 4 0 0 0 8 0c0-3-1-6-4-9z"/></svg></span>
+    <p class="kicker">Produk unggulan</p>
+    <h2 style="margin-bottom:40px">Sepuluh rempah &amp; herbal pilihan</h2>
+    <div class="prod-table">
+      <div class="prod-row">
         <h3>Jahe Gajah</h3>
-        <p>Rimpang besar dengan aroma lembut — primadona ekspor untuk bumbu, minuman, dan industri pangan.</p>
-        <span class="prod-grade">Export Grade</span>
-      </article>
-      <article class="prod-card reveal">
-        <span class="prod-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10M9 20c0-4 1.5-6 3-8 1.5 2 3 4 3 8M12 4C9 7 8 10 8 13a4 4 0 0 0 8 0c0-3-1-6-4-9z"/></svg></span>
+        <p>Rimpang besar dengan aroma lembut. Untuk bumbu, minuman, dan industri pangan.</p>
+        <span class="grade">Export grade</span>
+      </div>
+      <div class="prod-row">
         <h3>Jahe Merah</h3>
-        <p>Kandungan oleoresin tinggi — favorit untuk herbal, obat tradisional, dan minyak atsiri.</p>
-        <span class="prod-grade">Export Grade</span>
-      </article>
-      <article class="prod-card reveal">
-        <span class="prod-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="13" rx="7" ry="9"/><path d="M12 4v18M8 8c2 1 6 1 8 0"/></svg></span>
+        <p>Kandungan oleoresin tinggi. Untuk herbal, obat tradisional, dan minyak atsiri.</p>
+        <span class="grade">Export grade</span>
+      </div>
+      <div class="prod-row">
         <h3>Kunyit</h3>
-        <p>Kurkumin tinggi, warna alami cerah — untuk bumbu, pewarna, suplemen, dan kosmetik.</p>
-        <span class="prod-grade">Export Grade</span>
-      </article>
-      <article class="prod-card reveal">
-        <span class="prod-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8c2 1 10 1 14 0M5 16c2-1 10-1 14 0"/></svg></span>
+        <p>Kurkumin tinggi dan warna alami cerah. Untuk bumbu, pewarna, dan suplemen.</p>
+        <span class="grade">Export grade</span>
+      </div>
+      <div class="prod-row">
         <h3>Temulawak</h3>
-        <p>Rimpang emas khas Nusantara — jamu tradisional, hepatoprotektor, dan industri farmasi.</p>
-        <span class="prod-grade">Export Grade</span>
-      </article>
-      <article class="prod-card reveal">
-        <span class="prod-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4-2 6-5 6-9V5l-6-2-6 2v8c0 4 2 7 6 9z"/><path d="M12 8v6M9 11h6"/></svg></span>
+        <p>Rimpang khas Nusantara. Untuk jamu, industri farmasi, dan pangan.</p>
+        <span class="grade">Export grade</span>
+      </div>
+      <div class="prod-row">
         <h3>Kapulaga</h3>
-        <p>Aroma harum khas — rempah bernilai tinggi untuk kuliner, parfum, dan pengobatan.</p>
-        <span class="prod-grade">Export Grade</span>
-      </article>
-      <article class="prod-card reveal">
-        <span class="prod-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+        <p>Aroma harum khas, bernilai tinggi. Untuk kuliner, parfum, dan pengobatan.</p>
+        <span class="grade">Export grade</span>
+      </div>
+      <div class="prod-row">
         <h3>Cengkeh</h3>
-        <p>Eugenol tinggi — rempah ikonik Indonesia untuk bumbu, rokok kretek, dan minyak atsiri.</p>
-        <span class="prod-grade">Export Grade</span>
-      </article>
-      <article class="prod-card reveal">
-        <span class="prod-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M12 6c-2 0-4 1-4 3 0 4 8 3 8 7 0 2-2 3-4 3M12 6c2 0 4 1 4 3 0 4-8 3-8 7 0 2 2 3 4 3"/></svg></span>
+        <p>Eugenol tinggi. Untuk bumbu, rokok kretek, dan minyak atsiri.</p>
+        <span class="grade">Export grade</span>
+      </div>
+      <div class="prod-row">
         <h3>Kayu Manis</h3>
-        <p>Kulit kayu manis aromatik — bumbu dunia, bahan bakeri, dan suplemen kesehatan.</p>
-        <span class="prod-grade">Export Grade</span>
-      </article>
-      <article class="prod-card reveal">
-        <span class="prod-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 3-5 6-5 9a5 5 0 0 0 10 0c0-3-2-6-5-9z"/><path d="M12 3v18"/></svg></span>
+        <p>Kulit aromatik. Untuk bumbu dunia, bakeri, dan suplemen kesehatan.</p>
+        <span class="grade">Export grade</span>
+      </div>
+      <div class="prod-row">
         <h3>Lada Hitam &amp; Putih</h3>
-        <p>"Raja Rempah" — piperine tinggi, permintaan dunia tak pernah surut. Tersedia hitam &amp; putih.</p>
-        <span class="prod-grade">Export Grade</span>
-      </article>
-      <article class="prod-card reveal">
-        <span class="prod-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-5 0-8-3-8-7s3-8 8-11c5 3 8 7 8 11s-3 7-8 7z"/><path d="M12 21c-2 0-3-4-3-9s1-9 3-9 3 4 3 9-1 9-3 9z"/></svg></span>
+        <p>Piperine tinggi. Permintaan dunia yang konsisten, tersedia dua varian.</p>
+        <span class="grade">Export grade</span>
+      </div>
+      <div class="prod-row">
         <h3>Sereh</h3>
-        <p>Citral tinggi — bumbu dapur sekaligus bahan minyak atsiri dan minuman herbal.</p>
-        <span class="prod-grade">Export Grade</span>
-      </article>
-      <article class="prod-card reveal">
-        <span class="prod-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c6 0 10-3 12-8 1-3 0-6-2-8-2 2-3 5-2 8 2-3 4-4 6-4-1 5-5 9-10 10z"/></svg></span>
+        <p>Citral tinggi. Untuk bumbu dapur dan bahan minyak atsiri.</p>
+        <span class="grade">Export grade</span>
+      </div>
+      <div class="prod-row">
         <h3>Daun Kelor</h3>
-        <p>Superfood nutrisi tinggi — daun kering kaya vitamin, untuk kesehatan dan industri pangan.</p>
-        <span class="prod-grade">Export Grade</span>
-      </article>
+        <p>Daun kering kaya nutrisi. Untuk kesehatan dan industri pangan.</p>
+        <span class="grade">Export grade</span>
+      </div>
     </div>
+    <p class="prod-note">Semua produk melalui sortasi, pengeringan, dan pengemasan higienis. Spesifikasi dan ketersediaan dapat dikirimkan atas permintaan.</p>
   </div>
 </section>
 
 <!-- ============ PROSES ============ -->
 <section class="section process-section" id="proses">
   <div class="container">
-    <div class="sec-head center reveal">
-      <span class="eyebrow">Rantai Pasok</span>
-      <h2>Dari Kebun, Diolah dengan Standar Ekspor</h2>
-      <p class="lead" style="margin-inline:auto">Empat tahap yang menjaga kualitas dari petani hingga tiba di pelabuhan tujuan.</p>
-    </div>
-    <div class="process-grid">
-      <div class="pstep reveal">
-        <span class="pstep-num">1</span>
-        <h3>Kemitraan Petani</h3>
-        <p>Bekerja langsung dengan petani Jawa Barat — panen terbaik, harga adil, pasokan berkelanjutan.</p>
+    <p class="kicker">Rantai pasok</p>
+    <h2 style="margin-bottom:40px">Empat tahap, satu standar</h2>
+    <div class="proc-grid">
+      <div class="proc-step">
+        <span class="n">Tahap 1</span>
+        <h3>Kemitraan petani</h3>
+        <p>Bekerja langsung dengan petani Jawa Barat. Pasokan terbaik, harga adil.</p>
       </div>
-      <div class="pstep reveal">
-        <span class="pstep-num">2</span>
+      <div class="proc-step">
+        <span class="n">Tahap 2</span>
         <h3>Sortasi</h3>
-        <p>Pemilahan ketat berdasarkan ukuran, tingkat kematangan, dan kebersihan produk.</p>
+        <p>Pemilahan ketat berdasarkan ukuran, kematangan, dan kebersihan.</p>
       </div>
-      <div class="pstep reveal">
-        <span class="pstep-num">3</span>
+      <div class="proc-step">
+        <span class="n">Tahap 3</span>
         <h3>Pengeringan</h3>
-        <p>Pengeringan higienis yang menjaga aroma, warna, dan kandungan aktif produk.</p>
+        <p>Proses higienis yang menjaga aroma, warna, dan kandungan aktif.</p>
       </div>
-      <div class="pstep reveal">
-        <span class="pstep-num">4</span>
-        <h3>Pengemasan &amp; Ekspor</h3>
-        <p>Pengemasan sesuai standar ekspor, traceable per lot, siap dikirim ke pasar internasional.</p>
+      <div class="proc-step">
+        <span class="n">Tahap 4</span>
+        <h3>Pengemasan &amp; ekspor</h3>
+        <p>Pengemasan standar ekspor, traceable per lot, siap dikirim.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ GALERI ============ -->
-<section class="section" id="galeri">
-  <div class="container">
-    <div class="sec-head center reveal">
-      <span class="eyebrow">Galeri</span>
-      <h2>Kekayaan Rempah Nusantara</h2>
-    </div>
-    <div class="gallery">
-      <figure class="g-item reveal"><img src="images/turmeric.jpg" alt="Kunyit" /><figcaption>Kunyit Pilihan</figcaption></figure>
-      <figure class="g-item reveal"><img src="images/ginger.jpg" alt="Jahe" /><figcaption>Jahe Segar</figcaption></figure>
-      <figure class="g-item reveal"><img src="images/cinnamon.jpg" alt="Kayu manis" /><figcaption>Kayu Manis</figcaption></figure>
-      <figure class="g-item reveal"><img src="images/pepper.jpg" alt="Lada" /><figcaption>Lada Hitam</figcaption></figure>
-      <figure class="g-item reveal"><img src="images/cloves.jpg" alt="Cengkeh" /><figcaption>Cengkeh</figcaption></figure>
-      <figure class="g-item reveal"><img src="images/lemongrass.jpg" alt="Sereh" /><figcaption>Sereh Wangi</figcaption></figure>
-      <figure class="g-item reveal"><img src="images/moringa.jpg" alt="Daun kelor" /><figcaption>Daun Kelor</figcaption></figure>
-      <figure class="g-item reveal"><img src="images/hero-spices.jpg" alt="Rempah pilihan" /><figcaption>Rempah Premium</figcaption></figure>
     </div>
   </div>
 </section>
 
 <!-- ============ KONTAK ============ -->
-<section class="section" id="kontak" style="background:var(--muted);border-top:3px solid var(--primary);border-bottom:3px solid var(--primary)">
-  <div class="container">
-    <div class="sec-head center reveal">
-      <span class="eyebrow">Hubungi Kami</span>
-      <h2>Siap Bermitra untuk Pasar Dunia?</h2>
-      <p class="lead" style="margin-inline:auto">Kami terbuka untuk penawaran ekspor, kemitraan petani, dan kerja sama B2B internasional.</p>
+<section class="section" id="kontak">
+  <div class="container contact-grid">
+    <div class="contact-info">
+      <p class="kicker">Hubungi kami</p>
+      <h2>Siap bermitra?</h2>
+      <p>Kami terbuka untuk penawaran ekspor, kemitraan petani, dan kerja sama B2B internasional.</p>
+      <ul class="c-list">
+        <li><span class="k">Kantor</span><span class="v">Bogor, Jawa Barat — Indonesia</span></li>
+        <li><span class="k">Telepon / WhatsApp</span><span class="v">[isi nomor kontak]</span></li>
+        <li><span class="k">Email</span><span class="v">[isi alamat email]</span></li>
+        <li><span class="k">Layanan</span><span class="v">Ekspor B2B · Kemitraan petani · Private label</span></li>
+      </ul>
     </div>
-    <div class="contact-grid">
-      <div class="info-card reveal">
-        <div class="info-row">
-          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-          <div><b>Kantor</b><span>Bogor, Jawa Barat — Indonesia<br /><span class="muted">Jantung kawasan Parahyangan</span></span></div>
+    <div class="quote-form">
+      <h3>Minta penawaran</h3>
+      <p class="sub">Isi formulir ini, tim kami akan merespons dengan penawaran.</p>
+      <form onsubmit="alert('Terima kasih! (Formulir demo — hubungi kontak resmi untuk penawaran sebenarnya.)'); return false;">
+        <div class="field">
+          <label for="nama">Nama</label>
+          <input type="text" id="nama" name="nama" placeholder="Nama lengkap" required />
         </div>
-        <div class="info-row">
-          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg></span>
-          <div><b>Telepon / WhatsApp</b><span>[isi nomor kontak]</span></div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="email@perusahaan.com" required />
         </div>
-        <div class="info-row">
-          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M22 7l-10 6L2 7"/></svg></span>
-          <div><b>Email</b><span>[isi alamat email]</span></div>
+        <div class="field">
+          <label for="produk">Produk</label>
+          <select id="produk" name="produk">
+            <option>Jahe Gajah</option><option>Jahe Merah</option><option>Kunyit</option>
+            <option>Temulawak</option><option>Kapulaga</option><option>Cengkeh</option>
+            <option>Kayu Manis</option><option>Lada Hitam &amp; Putih</option>
+            <option>Sereh</option><option>Daun Kelor</option><option>Campuran / lainnya</option>
+          </select>
         </div>
-        <div class="info-row">
-          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1M3 8h14v8H3z"/><path d="M7 12h.01"/></svg></span>
-          <div><b>Layanan</b><span>Ekspor B2B · Kemitraan Petani · Private Label · Kontrak Pasokan</span></div>
+        <div class="field">
+          <label for="pesan">Kebutuhan</label>
+          <textarea id="pesan" name="pesan" placeholder="Jumlah, standar kualitas, negara tujuan..."></textarea>
         </div>
-      </div>
-      <div class="quote-form reveal">
-        <h3>Minta Penawaran</h3>
-        <p>Isi formulir berikut — tim kami akan merespons dengan penawaran terbaik.</p>
-        <form onsubmit="alert('Terima kasih! (Formulir demo — hubungi kontak resmi untuk penawaran.)'); return false;">
-          <div class="form-grid">
-            <div class="field">
-              <label for="nama">Nama</label>
-              <input type="text" id="nama" name="nama" placeholder="Nama lengkap" required />
-            </div>
-            <div class="field">
-              <label for="perusahaan">Perusahaan</label>
-              <input type="text" id="perusahaan" name="perusahaan" placeholder="Nama perusahaan" />
-            </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="email@perusahaan.com" required />
-            </div>
-            <div class="field">
-              <label for="produk">Produk</label>
-              <select id="produk" name="produk">
-                <option>Jahe Gajah</option><option>Jahe Merah</option><option>Kunyit</option>
-                <option>Temulawak</option><option>Kapulaga</option><option>Cengkeh</option>
-                <option>Kayu Manis</option><option>Lada Hitam &amp; Putih</option>
-                <option>Sereh</option><option>Daun Kelor</option><option>Campuran / Lainnya</option>
-              </select>
-            </div>
-            <div class="field full">
-              <label for="pesan">Pesan</label>
-              <textarea id="pesan" name="pesan" placeholder="Jelaskan kebutuhan: jumlah, standar kualitas, negara tujuan..."></textarea>
-            </div>
-            <div class="field full">
-              <button type="submit" class="btn btn-primary" style="width:100%">
-                Kirim Permintaan
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-              </button>
-            </div>
-          </div>
-          <p class="form-note">* Formulir ini bagian dari mockup — hubungi kontak resmi untuk penawaran sebenarnya.</p>
-        </form>
-      </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Kirim permintaan</button>
+        <p class="form-note">Formulir ini bagian dari mockup. Untuk penawaran sebenarnya, hubungi kontak resmi perusahaan.</p>
+      </form>
     </div>
   </div>
 </section>
@@ -697,13 +506,10 @@
 <!-- ============ CTA ============ -->
 <section class="section" style="padding-top:0">
   <div class="container">
-    <div class="cta-band reveal">
-      <h2>Bawa Rempah Terbaik Indonesia ke Pasarmu</h2>
-      <p>Kualitas premium, rantai pasok yang bisa dipercaya, dan kemitraan yang adil — mulai dari satu penawaran.</p>
-      <a href="#kontak" class="btn btn-light">
-        Mulai Kerja Sama
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
+    <div class="cta-band">
+      <h2>Bawa rempah terbaik Indonesia ke pasarmu</h2>
+      <p>Kualitas konsisten, rantai pasok yang bisa dipercaya, kemitraan yang adil. Mulai dari satu penawaran.</p>
+      <a href="#kontak" class="btn btn-primary">Mulai kerja sama</a>
     </div>
   </div>
 </section>
@@ -712,11 +518,9 @@
 <footer>
   <div class="container">
     <div class="foot-grid">
-      <a href="#beranda" class="logo" style="color:#F5EFE6">
-        <span class="logo-mark" style="background:#fff;overflow:visible;box-shadow:none">
-          <img src="images/logo-icon-jiwa-parahyangan-256.png" alt="Logo PT Jiwa Parahyangan Sejati" style="width:36px;height:36px;object-fit:contain" />
-        </span>
-        PT Jiwa Parahyangan Sejati
+      <a href="#beranda" class="logo">
+        <img src="images/logo-icon-jiwa-parahyangan-256.png" alt="Logo PT Jiwa Parahyangan Sejati" />
+        <span class="l-name">Jiwa Parahyangan Sejati</span>
       </a>
       <ul class="foot-links">
         <li><a href="#tentang">Tentang</a></li>
@@ -727,8 +531,8 @@
       </ul>
     </div>
     <div class="foot-note">
-      <span>© 2026 PT Jiwa Parahyangan Sejati · Ekspor Rempah &amp; Herbal Premium Indonesia</span>
-      <span class="watermark">MOCKUP — BUKAN PRODUK JADI</span>
+      <span>© 2026 PT Jiwa Parahyangan Sejati</span>
+      <span>Ekspor rempah &amp; herbal premium Indonesia</span>
     </div>
   </div>
 </footer>
@@ -745,12 +549,6 @@
     navLinks.classList.remove('open');
     hamburger.setAttribute('aria-expanded', 'false');
   }));
-
-  // Reveal on scroll
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 </body>
 </html>
