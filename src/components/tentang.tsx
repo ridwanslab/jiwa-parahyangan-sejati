@@ -1,55 +1,54 @@
 import { Reveal } from '@/components/motion'
 
 const list = [
-  'Kemitraan langsung dengan petani Jawa Barat, tanpa perantara',
-  'Rantai pasok berkelanjutan, traceable, dan fair trade',
-  'Sortasi, pengeringan, dan pengemasan higienis standar ekspor',
+  'Direct partnerships with farmers across West Java, no middlemen',
+  'Sustainable, traceable, and fair-trade supply chain',
+  'Hygienic sorting, drying, and packing to export standards',
 ]
 
 export function Tentang() {
   return (
     <section id="tentang" className="py-20 md:py-28">
-      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-start gap-12 px-4 sm:px-6 md:grid-cols-2 lg:gap-20">
+      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-start gap-12 px-4 sm:px-6 md:grid-cols-2 lg:gap-16">
         <Reveal className="grid grid-cols-2 gap-4">
           <figure>
             <img
               src="images/farmers.jpg"
-              alt="Petani mitra di Jawa Barat"
-              className="aspect-[4/4.6] w-full rounded-md object-cover"
+              alt="Partner farmers in West Java"
+              className="aspect-[4/4.6] w-full rounded-lg object-cover"
             />
             <figcaption className="mt-2 font-mono text-[11px] text-muted-foreground">
-              Petani mitra — Jawa Barat
+              Partner farmers — West Java
             </figcaption>
           </figure>
           <figure className="pt-10">
             <img
               src="images/packaging.jpg"
-              alt="Pengemasan produk"
-              className="aspect-[4/3.2] w-full rounded-md object-cover"
+              alt="Export packaging"
+              className="aspect-[4/3.2] w-full rounded-lg object-cover"
             />
             <figcaption className="mt-2 font-mono text-[11px] text-muted-foreground">
-              Pengemasan standar ekspor
+              Export-standard packing
             </figcaption>
           </figure>
         </Reveal>
 
         <div>
           <Reveal>
-            <p className="font-mono text-xs uppercase tracking-widest text-primary">Tentang perusahaan</p>
-            <h2 className="mt-3 text-3xl font-light leading-tight tracking-tight sm:text-4xl">
-              Perusahaan ekspor yang tumbuh dari kekayaan Parahyangan
+            <p className="font-mono text-xs uppercase tracking-widest text-primary">About the company</p>
+            <h2 className="mt-3 font-display text-3xl font-light leading-tight tracking-tight sm:text-4xl">
+              An export company born from the riches of Parahyangan
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-5 font-light text-muted-foreground">
-              Berbasis di Bogor, di jantung kawasan Parahyangan, perusahaan ini bergerak di
-              penyediaan dan ekspor rempah-rempah serta tanaman herbal asli Indonesia.
-              Kualitas produk dijaga mulai dari pemilihan bahan baku di tingkat petani,
-              proses sortasi dan pengeringan, hingga pengemasan akhir.
+              Based in Bogor, at the heart of the Parahyangan region, we supply and export
+              authentic Indonesian spices and herbal botanicals. Quality is controlled from
+              raw-material selection at farm level, through sorting and drying, to final packing.
             </p>
             <p className="mt-4 font-light text-muted-foreground">
-              Seluruh produk dikerjakan langsung bersama petani di wilayah Jawa Barat.
-              Rantai pasok dirancang berkelanjutan, dapat ditelusuri, dan berpihak pada petani.
+              Every product is sourced directly with farmers across West Java. Our supply chain
+              is designed to be sustainable, traceable, and fair to the people who grow our spices.
             </p>
           </Reveal>
           <Reveal delay={0.18}>

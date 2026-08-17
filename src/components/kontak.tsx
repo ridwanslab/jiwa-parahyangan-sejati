@@ -7,26 +7,28 @@ import { Select } from '@/components/ui/select'
 import { products } from '@/lib/data'
 
 const contactRows = [
-  { k: 'Kantor', v: 'Bogor, Jawa Barat — Indonesia' },
-  { k: 'Telepon / WhatsApp', v: '[isi nomor kontak]' },
-  { k: 'Email', v: '[isi alamat email]' },
-  { k: 'Layanan', v: 'Ekspor B2B · Kemitraan petani · Private label' },
+  { k: 'Office', v: 'Bogor, West Java — Indonesia' },
+  { k: 'Phone / WhatsApp', v: '[add contact number]' },
+  { k: 'Email', v: '[add email address]' },
+  { k: 'Services', v: 'B2B export · Farmer partnerships · Private label' },
 ]
 
 export function Kontak() {
   const onSubmit = (e: FormEvent) => {
     e.preventDefault()
-    alert('Terima kasih! (Formulir demo — hubungi kontak resmi untuk penawaran sebenarnya.)')
+    alert('Thank you! (Demo form — please contact the official company contacts for a real quotation.)')
   }
 
   return (
     <section id="kontak" className="py-20 md:py-28">
-      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-12 px-4 sm:px-6 md:grid-cols-2 lg:gap-20">
+      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-12 px-4 sm:px-6 md:grid-cols-2 lg:gap-16">
         <Reveal>
-          <p className="font-mono text-xs uppercase tracking-widest text-primary">Hubungi kami</p>
-          <h2 className="mt-3 text-3xl font-light leading-tight tracking-tight sm:text-4xl">Siap bermitra?</h2>
+          <p className="font-mono text-xs uppercase tracking-widest text-primary">Contact us</p>
+          <h2 className="mt-3 font-display text-3xl font-light leading-tight tracking-tight sm:text-4xl">
+            Ready to partner?
+          </h2>
           <p className="mt-4 font-light text-muted-foreground">
-            Kami terbuka untuk penawaran ekspor, kemitraan petani, dan kerja sama B2B internasional.
+            We are open to export inquiries, farmer partnerships, and international B2B cooperation.
           </p>
           <ul className="mt-8 border-t border-border">
             {contactRows.map((r) => (
@@ -44,37 +46,37 @@ export function Kontak() {
         <Reveal delay={0.12}>
           <form
             onSubmit={onSubmit}
-            className="rounded-md border border-border bg-background p-6 md:p-8"
+            className="rounded-lg border border-border bg-background p-6 md:p-8"
           >
-            <h3 className="text-lg font-light tracking-tight">Minta penawaran</h3>
+            <h3 className="font-display text-lg font-normal tracking-tight">Request a quotation</h3>
             <p className="mt-1 text-sm text-muted-foreground">
-              Isi formulir ini, tim kami akan merespons dengan penawaran.
+              Fill in this form and our team will respond with an offer.
             </p>
             <div className="mt-6 space-y-4">
               <div className="space-y-1.5">
-                <label htmlFor="nama" className="text-xs text-muted-foreground">Nama</label>
-                <Input id="nama" name="nama" placeholder="Nama lengkap" required />
+                <label htmlFor="nama" className="text-xs text-muted-foreground">Name</label>
+                <Input id="nama" name="nama" placeholder="Full name" required />
               </div>
               <div className="space-y-1.5">
                 <label htmlFor="email" className="text-xs text-muted-foreground">Email</label>
-                <Input id="email" name="email" type="email" placeholder="email@perusahaan.com" required />
+                <Input id="email" name="email" type="email" placeholder="you@company.com" required />
               </div>
               <div className="space-y-1.5">
-                <label htmlFor="produk" className="text-xs text-muted-foreground">Produk</label>
+                <label htmlFor="produk" className="text-xs text-muted-foreground">Product</label>
                 <Select id="produk" name="produk" defaultValue={products[0].name}>
                   {products.map((p) => (
                     <option key={p.name} value={p.name}>{p.name}</option>
                   ))}
-                  <option value="campuran">Campuran / lainnya</option>
+                  <option value="mixed">Mixed / other</option>
                 </Select>
               </div>
               <div className="space-y-1.5">
-                <label htmlFor="pesan" className="text-xs text-muted-foreground">Kebutuhan</label>
-                <Textarea id="pesan" name="pesan" placeholder="Jumlah, standar kualitas, negara tujuan..." />
+                <label htmlFor="pesan" className="text-xs text-muted-foreground">Requirements</label>
+                <Textarea id="pesan" name="pesan" placeholder="Quantity, quality standard, destination country..." />
               </div>
-              <Button type="submit" className="w-full">Kirim permintaan</Button>
+              <Button type="submit" className="w-full">Send inquiry</Button>
               <p className="text-xs text-muted-foreground">
-                Formulir ini bagian dari mockup. Untuk penawaran sebenarnya, hubungi kontak resmi perusahaan.
+                This form is part of a mockup. For an actual quotation, please contact the official company.
               </p>
             </div>
           </form>

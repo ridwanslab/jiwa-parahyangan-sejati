@@ -5,11 +5,11 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
 const links = [
-  { href: '#tentang', label: 'Tentang' },
-  { href: '#keunggulan', label: 'Keunggulan' },
-  { href: '#produk', label: 'Produk' },
-  { href: '#proses', label: 'Proses' },
-  { href: '#kontak', label: 'Kontak' },
+  { href: '#tentang', label: 'About' },
+  { href: '#keunggulan', label: 'Why us' },
+  { href: '#produk', label: 'Products' },
+  { href: '#shipping', label: 'Shipping' },
+  { href: '#kontak', label: 'Contact' },
 ]
 
 export function Navbar() {
@@ -37,13 +37,13 @@ export function Navbar() {
         <a href="#beranda" className="flex items-center gap-2.5">
           <img
             src="images/logo-icon-jiwa-parahyangan-256.png"
-            alt="Logo PT Jiwa Parahyangan Sejati"
+            alt="PT Jiwa Parahyangan Sejati logo"
             className="h-8 w-8 object-contain"
           />
           <span className="text-[15px] font-medium tracking-tight">Jiwa Parahyangan Sejati</span>
         </a>
 
-        <nav className="hidden items-center gap-7 md:flex" aria-label="Navigasi utama">
+        <nav className="hidden items-center gap-7 md:flex" aria-label="Main navigation">
           {links.map((l) => (
             <a key={l.href} href={l.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
               {l.label}
@@ -53,7 +53,7 @@ export function Navbar() {
 
         <div className="hidden md:block">
           <Button asChild size="sm">
-            <a href="#kontak">Minta Penawaran</a>
+            <a href="#kontak">Request a quote</a>
           </Button>
         </div>
 
@@ -61,7 +61,7 @@ export function Navbar() {
           className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border md:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
-          aria-label="Buka menu"
+          aria-label="Open menu"
         >
           {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
         </button>
@@ -72,7 +72,7 @@ export function Navbar() {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           className="border-t border-border bg-background md:hidden"
-          aria-label="Navigasi mobile"
+          aria-label="Mobile navigation"
         >
           <div className="flex flex-col px-4 py-3">
             {links.map((l) => (
@@ -87,7 +87,7 @@ export function Navbar() {
             ))}
             <Button asChild size="sm" className="mt-2 w-full">
               <a href="#kontak" onClick={() => setOpen(false)}>
-                Minta Penawaran
+                Request a quote
               </a>
             </Button>
           </div>

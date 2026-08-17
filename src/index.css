@@ -1,22 +1,30 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #ffffff;
-  --color-foreground: #1a1a18;
-  --color-muted: #f8f7f4;
-  --color-muted-foreground: #8a8a82;
-  --color-secondary: #f1efea;
-  --color-secondary-foreground: #1a1a18;
-  --color-border: #e8e6e0;
-  --color-input: #e8e6e0;
-  --color-primary: #e07020;
+  --color-background: #faf7f0;
+  --color-foreground: #2a1e12;
+  --color-muted: #f3ede2;
+  --color-muted-foreground: #7a6b57;
+  --color-secondary: #efe6d6;
+  --color-secondary-foreground: #2a1e12;
+  --color-border: #e5d9c6;
+  --color-input: #e5d9c6;
+  --color-primary: #b8500e;
   --color-primary-foreground: #ffffff;
-  --color-primary-hover: #b85a14;
-  --color-ring: #e07020;
-  --color-ink-2: #4a4a45;
-  --radius: 0.375rem;
-  --font-sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --color-primary-hover: #9a4008;
+  --color-ring: #b8500e;
+  --color-gold: #c9a227;
+  --color-cream: #faf7f0;
+  --color-espresso: #2a1e12;
+  --radius: 0.5rem;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
   --font-mono: "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
@@ -25,4 +33,18 @@ body {
   color: var(--color-foreground);
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
+}
+
+::selection {
+  background: rgba(184, 80, 14, 0.15);
+}
+
+/* subtle grain texture on dark sections */
+.grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+  pointer-events: none;
 }

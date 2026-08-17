@@ -1,9 +1,9 @@
 const links = [
-  { href: '#tentang', label: 'Tentang' },
-  { href: '#keunggulan', label: 'Keunggulan' },
-  { href: '#produk', label: 'Produk' },
-  { href: '#proses', label: 'Proses' },
-  { href: '#kontak', label: 'Kontak' },
+  { href: '#tentang', label: 'About' },
+  { href: '#keunggulan', label: 'Why us' },
+  { href: '#produk', label: 'Products' },
+  { href: '#shipping', label: 'Shipping' },
+  { href: '#kontak', label: 'Contact' },
 ]
 
 export function Footer() {
@@ -14,12 +14,12 @@ export function Footer() {
           <a href="#beranda" className="flex items-center gap-2.5">
             <img
               src="images/logo-icon-jiwa-parahyangan-256.png"
-              alt="Logo PT Jiwa Parahyangan Sejati"
+              alt="PT Jiwa Parahyangan Sejati logo"
               className="h-7 w-7 object-contain"
             />
             <span className="text-sm font-medium tracking-tight">Jiwa Parahyangan Sejati</span>
           </a>
-          <nav aria-label="Navigasi footer">
+          <nav aria-label="Footer navigation">
             <ul className="flex flex-wrap gap-5">
               {links.map((l) => (
                 <li key={l.href}>
@@ -33,7 +33,7 @@ export function Footer() {
         </div>
         <div className="mt-7 flex flex-wrap items-center justify-between gap-2 border-t border-border pt-5 text-xs text-muted-foreground">
           <span>© 2026 PT Jiwa Parahyangan Sejati</span>
-          <span>Ekspor rempah &amp; herbal premium Indonesia</span>
+          <span>Premium Indonesian spice &amp; herbal exports</span>
         </div>
       </div>
     </footer>
