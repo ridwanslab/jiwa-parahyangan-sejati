@@ -1,5 +1,6 @@
 import { Reveal } from '@/components/motion'
 import { Button } from '@/components/ui/button'
+import { Link } from 'react-router-dom'
 
 export function Cta() {
   return (
@@ -18,7 +19,7 @@ export function Cta() {
             It starts with a single quotation.
           </p>
           <Button asChild size="lg" className="mt-8 bg-primary text-white hover:bg-primary-hover">
-            <a href="#kontak">Start a partnership</a>
+            <Link to="/quote">Start a partnership</Link>
           </Button>
         </Reveal>
       </div>

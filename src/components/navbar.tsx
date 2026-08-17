@@ -1,20 +1,22 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
 const links = [
-  { href: '#tentang', label: 'About' },
-  { href: '#keunggulan', label: 'Why us' },
-  { href: '#produk', label: 'Products' },
-  { href: '#shipping', label: 'Shipping' },
-  { href: '#kontak', label: 'Contact' },
+  { to: '/', label: 'Home' },
+  { to: '/products', label: 'Products' },
+  { to: '/about', label: 'About' },
+  { to: '/shipping', label: 'Shipping' },
+  { to: '/quality', label: 'Quality' },
 ]
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
@@ -22,6 +24,11 @@ export function Navbar() {
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  // tutup menu saat pindah halaman
+  useEffect(() => {
+    setOpen(false)
+  }, [location.pathname])
 
   return (
     <motion.header
@@ -34,26 +41,35 @@ export function Navbar() {
       )}
     >
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6">
-        <a href="#beranda" className="flex items-center gap-2.5">
+        <Link to="/" className="flex items-center gap-2.5">
           <img
             src="images/logo-icon-jiwa-parahyangan-256.png"
             alt="PT Jiwa Parahyangan Sejati logo"
             className="h-8 w-8 object-contain"
           />
           <span className="text-[15px] font-medium tracking-tight">Jiwa Parahyangan Sejati</span>
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-7 md:flex" aria-label="Main navigation">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            <NavLink
+              key={l.to}
+              to={l.to}
+              className={({ isActive }) =>
+                cn(
+                  'text-sm transition-colors hover:text-foreground',
+                  isActive ? 'text-foreground' : 'text-muted-foreground'
+                )
+              }
+            >
               {l.label}
-            </a>
+            </NavLink>
           ))}
         </nav>
 
         <div className="hidden md:block">
           <Button asChild size="sm">
-            <a href="#kontak">Request a quote</a>
+            <Link to="/quote">Request a quote</Link>
           </Button>
         </div>
 
@@ -76,19 +92,18 @@ export function Navbar() {
         >
           <div className="flex flex-col px-4 py-3">
             {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="py-2.5 text-sm text-foreground"
+              <NavLink
+                key={l.to}
+                to={l.to}
+                className={({ isActive }) =>
+                  cn('py-2.5 text-sm', isActive ? 'font-medium text-foreground' : 'text-foreground')
+                }
               >
                 {l.label}
-              </a>
+              </NavLink>
             ))}
             <Button asChild size="sm" className="mt-2 w-full">
-              <a href="#kontak" onClick={() => setOpen(false)}>
-                Request a quote
-              </a>
+              <Link to="/quote">Request a quote</Link>
             </Button>
           </div>
         </motion.nav>

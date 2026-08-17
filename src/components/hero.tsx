@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { MapPin, Sprout, BadgeCheck } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 
 const meta = [
@@ -45,10 +46,10 @@ export function Hero() {
           </motion.p>
           <motion.div {...fade(0.24)} className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg">
-              <a href="#produk">Browse our spices</a>
+              <Link to="/products">Browse our spices</Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <a href="#kontak">Request a quote</a>
+              <Link to="/quote">Request a quote</Link>
             </Button>
           </motion.div>
           <motion.div

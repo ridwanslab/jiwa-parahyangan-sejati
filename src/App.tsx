@@ -1,31 +1,29 @@
-import { Navbar } from '@/components/navbar'
-import { Hero } from '@/components/hero'
-import { Tentang } from '@/components/tentang'
-import { Keunggulan } from '@/components/keunggulan'
-import { Produk } from '@/components/produk'
-import { Proses } from '@/components/proses'
-import { Shipping } from '@/components/shipping'
-import { Quality } from '@/components/quality'
-import { Kontak } from '@/components/kontak'
-import { Cta } from '@/components/cta'
-import { Footer } from '@/components/footer'
+import { HashRouter, Routes, Route } from 'react-router-dom'
+import { Layout } from '@/components/layout'
+import { HomePage } from '@/pages/home'
+import { ProductsPage } from '@/pages/products'
+import { ProductDetailPage } from '@/pages/product-detail'
+import { AboutPage } from '@/pages/about'
+import { ShippingPage } from '@/pages/shipping'
+import { QualityPage } from '@/pages/quality'
+import { QuotePage } from '@/pages/quote'
+import { NotFoundPage } from '@/pages/not-found'
 
 export default function App() {
   return (
-    <>
-      <Navbar />
-      <main>
-        <Hero />
-        <Tentang />
-        <Keunggulan />
-        <Produk />
-        <Proses />
-        <Shipping />
-        <Quality />
-        <Kontak />
-        <Cta />
-      </main>
-      <Footer />
-    </>
+    <HashRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="products" element={<ProductsPage />} />
+          <Route path="products/:slug" element={<ProductDetailPage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="shipping" element={<ShippingPage />} />
+          <Route path="quality" element={<QualityPage />} />
+          <Route path="quote" element={<QuotePage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
+    </HashRouter>
   )
 }
