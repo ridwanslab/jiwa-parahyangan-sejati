@@ -87,9 +87,19 @@ export function AboutPage() {
                 variants={staggerItem}
                 className="group rounded-lg border border-border bg-background p-6 text-center transition-colors duration-300 hover:border-primary/40"
               >
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 font-display text-xl text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
-                  {t.initials}
-                </div>
+                {t.img ? (
+                  <div className="mx-auto h-24 w-24 overflow-hidden rounded-full border-2 border-border">
+                    <img
+                      src={t.img}
+                      alt={t.name}
+                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                ) : (
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 font-display text-xl text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
+                    {t.initials}
+                  </div>
+                )}
                 <h3 className="mt-4 font-display text-base font-normal tracking-tight">{t.name}</h3>
                 <p className="mt-1 font-mono text-[11px] uppercase tracking-widest text-muted-foreground">
                   {t.role}

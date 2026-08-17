@@ -290,8 +290,8 @@ export const qualityPoints = [
 ]
 
 export const team = [
-  { name: 'Manjeet Kaur Melanie Gill', role: 'Chief Executive Officer', initials: 'MG' },
-  { name: 'Edi Maryadi', role: 'Chief Operating Officer', initials: 'EM' },
-  { name: 'Ridwan Maulana', role: 'Supervisor', initials: 'RM' },
-  { name: 'Ambarasari Santana', role: 'Chief Financial Officer', initials: 'AS' },
+  { name: 'Manjeet Kaur Melanie Gill', role: 'Chief Executive Officer', initials: 'MG', img: '' },
+  { name: 'Edi Maryadi', role: 'Chief Operating Officer', initials: 'EM', img: '' },
+  { name: 'Ambarasari Santana', role: 'Chief Financial Officer', initials: 'AS', img: '' },
+  { name: 'Ridwan Maulana', role: 'Supervisor', initials: 'RM', img: '' },
 ]
