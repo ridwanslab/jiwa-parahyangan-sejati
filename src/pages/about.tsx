@@ -80,6 +80,19 @@ export function AboutPage() {
             </h2>
           </Reveal>
 
+          <Reveal delay={0.08} className="mt-8">
+            <figure>
+              <img
+                src="images/team/team-group.jpg"
+                alt="Team PT Jiwa Parahyangan Sejati"
+                className="aspect-[3/2] w-full rounded-lg border border-border object-cover"
+              />
+              <figcaption className="mt-2 font-mono text-[11px] text-muted-foreground">
+                The Jiwa Parahyangan Sejati team
+              </figcaption>
+            </figure>
+          </Reveal>
+
           <Stagger className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {team.map((t) => (
               <motion.div
